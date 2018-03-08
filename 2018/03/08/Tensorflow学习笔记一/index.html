@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="简单点">
 <meta property="og:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。把学习的内容整理下来和大家交流。应该会从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。 Hello World创建一个session，它是tf对所有对象操作所需的基本单元。Session 是 Tensorflow">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T08:40:45.077Z">
+<meta property="og:updated_time" content="2018-03-08T08:41:38.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow学习笔记一">
 <meta name="twitter:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。把学习的内容整理下来和大家交流。应该会从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。 Hello World创建一个session，它是tf对所有对象操作所需的基本单元。Session 是 Tensorflow">
@@ -375,7 +375,7 @@
 
       
         <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。把学习的内容整理下来和大家交流。应该会从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。</p>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>创建一个session，它是tf对所有对象操作所需的基本单元。<br>Session 是 Tensorflow 为了控制,和输出文件的执行的语句. 运行 session.run() 可以获得你要得知的运算结果, 或者是你所要运算的部分。<br>‘’’python<br>import tensorflow as tf<br>hello = tf.constant(‘Hello, TensorFlow!’)<br>sess = tf.Session()<br>print sess.run(hello)<br>‘’’</p>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>创建一个session，它是tf对所有对象操作所需的基本单元。<br>Session 是 Tensorflow 为了控制,和输出文件的执行的语句. 运行 session.run() 可以获得你要得知的运算结果, 或者是你所要运算的部分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">hello = tf.constant(<span class="string">'Hello, TensorFlow!'</span>)</span><br><span class="line">sess = tf.Session()</span><br><span class="line"><span class="keyword">print</span> sess.run(hello)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
