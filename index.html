@@ -374,7 +374,7 @@
       
         
           
-           变量和占位符计算图TensorFlow 是一种采用数据流图（data flow graphs），用于数值计算的开源软件库。其中 Tensor 代表传递的数据为张量（多维数组），Flow 代表使用计算图进行运算。数据流图用「结点」（nodes）和「边」（edges）组成的有向图来描述数学运算。「结点
+           常量、变量和占位符在定义计算图之前要了解一下tf中变量保存的形式。TensorFlow 中最基本的单位是常量（Constant）、变量（Variable）和占位符（Placeholder）。常量定义后值和维度不可变，变量定义后值可变而维度不可变。在神经网络中，变量一般可作为储存权重和其他信息的矩阵
           ...
           <!--noindex-->
           <div class="post-button text-center">
