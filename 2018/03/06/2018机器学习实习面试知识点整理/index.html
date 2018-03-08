@@ -87,10 +87,15 @@
 <meta property="og:site_name" content="简单点">
 <meta property="og:description" content="算是第一次正式的跟职场接触, 刚开始的时候也是一头雾水的状态。面得多了也慢慢有经验, 除了第一个头条挂了, 嗯挂的很惨。也是很想去的一家公司, 但是第一次哎, 多半会这样, 有种似曾相识的感觉。后面的除了阿里还没有回复, 一共拿了5个offer, 还算满意了吧。有些遗憾的是因为时间不合适, 没有去尝试一些大厂, 下次一定要补上。 这里总结的问题一部分是我自己遇到的, 还有一大部分是网上看了别人的面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-07T14:13:55.448Z">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-8/65401032.jpg">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-8/57695817.jpg">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-8/9308923.jpg">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-8/12921290.jpg">
+<meta property="og:updated_time" content="2018-03-08T09:21:44.053Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018机器学习实习面试知识点整理">
 <meta name="twitter:description" content="算是第一次正式的跟职场接触, 刚开始的时候也是一头雾水的状态。面得多了也慢慢有经验, 除了第一个头条挂了, 嗯挂的很惨。也是很想去的一家公司, 但是第一次哎, 多半会这样, 有种似曾相识的感觉。后面的除了阿里还没有回复, 一共拿了5个offer, 还算满意了吧。有些遗憾的是因为时间不合适, 没有去尝试一些大厂, 下次一定要补上。 这里总结的问题一部分是我自己遇到的, 还有一大部分是网上看了别人的面">
+<meta name="twitter:image" content="http://p59louklr.bkt.clouddn.com/18-3-8/65401032.jpg">
 
 
 
@@ -392,12 +397,8 @@
 <li>Tamura (tamura)<br>Tamura 纹理特征基于人类对纹理的视觉感知心理学研究，提出6种属性，即：粗糙度、对比度、方向度、线像度、规整度和粗略度。</li>
 <li>Local Binary Patterns (lbp)</li>
 </ul>
-<p>LBP特征(从灰度图提取)<br>下图反应了某个像素的具体的LBP特征值的计算过程，需要注意的是，LBP值是按照顺时针方向组成的二进制数。</p>
-<p>用公式来定义的话，如下所示：</p>
-<p>其中代表3x3邻域的中心元素，它的像素值为ic，ip代表邻域内其他像素的值。s(x)是符号函数，定义如下：</p>
-<p>HOG特征(从灰度图提取)<br>方向梯度直方图（Histogram of Oriented Gradient, HOG）<br>计算图像横坐标和纵坐标方向的梯度，并据此计算每个像素位置的梯度方向值；求导操作不仅能够捕获轮廓，人影和一些纹理信息，还能进一步弱化光照的影响。<br>图像中像素点(x,y)的梯度为：</p>
-<pre><code>最常用的方法是：首先用[-1,0,1]梯度算子对原图像做卷积运算，得到x方向（水平方向，以向右为正方向）的梯度分量gradscalx，然后用[1,0,-1]T梯度算子对原图像做卷积运算，得到y方向（竖直方向，以向上为正方向）的梯度分量gradscaly。然后再用以上公式计算该像素点的梯度大小和方向。
-</code></pre><p>（3）为每个细胞单元构建梯度方向直方图<br>（4）把细胞单元组合成大的块（block），块内归一化梯度直方图</p>
+<p>LBP特征(从灰度图提取)<br>下图反应了某个像素的具体的LBP特征值的计算过程，需要注意的是，LBP值是按照顺时针方向组成的二进制数。<br><img src="http://p59louklr.bkt.clouddn.com/18-3-8/65401032.jpg" alt=""><br>用公式来定义的话，如下所示：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-8/57695817.jpg" alt=""><br>其中代表3x3邻域的中心元素，它的像素值为ic，ip代表邻域内其他像素的值。s(x)是符号函数，定义如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-8/9308923.jpg" alt=""></p>
+<p>HOG特征(从灰度图提取)<br>方向梯度直方图（Histogram of Oriented Gradient, HOG）<br>计算图像横坐标和纵坐标方向的梯度，并据此计算每个像素位置的梯度方向值；求导操作不仅能够捕获轮廓，人影和一些纹理信息，还能进一步弱化光照的影响。<br>图像中像素点(x,y)的梯度为：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-8/12921290.jpg" alt=""><br>       最常用的方法是：首先用[-1,0,1]梯度算子对原图像做卷积运算，得到x方向（水平方向，以向右为正方向）的梯度分量gradscalx，然后用[1,0,-1]T梯度算子对原图像做卷积运算，得到y方向（竖直方向，以向上为正方向）的梯度分量gradscaly。然后再用以上公式计算该像素点的梯度大小和方向。<br>（3）为每个细胞单元构建梯度方向直方图<br>（4）把细胞单元组合成大的块（block），块内归一化梯度直方图</p>
 <p>ORB特征(提取特征点)<br>ORB：An Efficient Alternative to SIFT or SURF</p>
 <h2 id="0-调参"><a href="#0-调参" class="headerlink" title="0.调参"></a>0.调参</h2><p>目的：偏差和方差的协调！！！bias，variance<br>原则：模型从简单到复杂，避免过拟合<br>传统方法：<br>1）树类分类器<br>n_estimators:子模型数量<br>max_features:每个子树能用到的最大特征。一般去总特征数开方或者log或者全部<br>max_depth:最大深度<br>min_sample_split:<br>min_sample_leaf:<br>神经网络：<br>learning rate: 1 0.1 0.01 0.001, 一般从1开始尝试。很少见learning rate大于10的。学习率一般要随着训练进行衰减。衰减系数一般是0.5。 衰减时机，可以是验证集准确率不再上升时，或固定训练多少个周期以后。<br>不过更建议使用自适应梯度的办法，例如adam,adadelta,rmsprop等，这些一般使用相关论文提供的默认值即可，可以避免再费劲调节学习率。对RNN来说，有个经验，如果RNN要处理的序列比较长，或者RNN层数比较多，那么learning rate一般小一些比较好，否则有可能出现结果不收敛，甚至Nan等问题。<br>网络层数： 先从1层开始。<br>每层结点数： 16 32 128，超过1000的情况比较少见。超过1W的从来没有见过。<br>batch size: 128上下开始。batch size值增加，的确能提高训练速度。但是有可能收敛结果变差。如果显存大小允许，可以考虑从一个比较大的值开始尝试。因为batch size太大，一般不会对结果有太大的影响，而batch size太小的话，结果有可能很差。<br>clip c(梯度裁剪): 限制最大梯度,其实是value = sqrt(w1^2+w2^2….),如果value超过了阈值，就算一个衰减系系数,让value的值等于阈值: 5,10,15<br>dropout： 0.5<br>L2正则：1.0，超过10的很少见。<br>正负样本比例： 这个是非常忽视，但是在很多分类问题上，又非常重要的参数。很多人往往习惯使用训练数据中默认的正负类别比例，当训练数据非常不平衡的时候，模型很有可能会偏向数目较大的类别，从而影响最终训练结果。除了尝试训练数据默认的正负类别比例之外，建议对数目较小的样本做过采样，例如进行复制。提高他们的比例，看看效果如何，这个对多分类问题同样适用。<br>在使用mini-batch方法进行训练的时候，尽量让一个batch内，各类别的比例平衡，这个在图像识别等多分类任务上非常重要。</p>
 <h2 id="1-什么是boosting-tree（加法模型-前向分布）"><a href="#1-什么是boosting-tree（加法模型-前向分布）" class="headerlink" title="1.什么是boosting tree（加法模型+前向分布）"></a>1.什么是boosting tree（加法模型+前向分布）</h2><p>Boosting方法： Boosting这其实思想相当的简单，大概是，对一份数据，建立M个模型（比如分类），一般这种模型比较简单，称为弱分类器(weak learner)每次分类都将上一次分错的数据权重提高一点再进行分类，这样最终得到的分类器在测试数据与训练数据上都可以得到比较好的成绩。<br>前向分布算法 实际上是一个贪心的算法，也就是在每一步求解弱分类器Φ(m)和其参数w(m)的时候不去修改之前已经求好的分类器和参数。</p>
