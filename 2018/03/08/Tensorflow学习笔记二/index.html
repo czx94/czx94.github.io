@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="无病呻吟," />
+  <meta name="keywords" content="Tensorflow," />
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="其实写一个个人网站是一个已经酝酿许久的想法, 但是一直太懒, 也没有时间;), 所以就耽搁下了。这次趁着在法国生活即将结束之际, 偷懒地用github把这个小计划也实现了。以后会在这里写些技术文章, 机器学习, 算法, AI估计都会有, 希望能和大家共同进步吧, 和一些无病呻吟的文章, 毕竟生活还需要记录和一些仪式感。马上就要回国了, 总算可以专心写代码学算法了, 之前学的时候都太仓促, 以后要">
-<meta name="keywords" content="无病呻吟">
+<meta name="description" content="变量和占位符计算图TensorFlow 是一种采用数据流图（data flow graphs），用于数值计算的开源软件库。其中 Tensor 代表传递的数据为张量（多维数组），Flow 代表使用计算图进行运算。数据流图用「结点」（nodes）和「边」（edges）组成的有向图来描述数学运算。「结点」一般用来表示施加的数学操作，但也可以表示数据输入的起点和输出的终点，或者是读取/写入持久变量（pe">
+<meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写在开始">
-<meta property="og:url" content="http://czx.im/2018/03/05/写在开始/index.html">
+<meta property="og:title" content="Tensorflow学习笔记二">
+<meta property="og:url" content="http://czx.im/2018/03/08/Tensorflow学习笔记二/index.html">
 <meta property="og:site_name" content="简单点">
-<meta property="og:description" content="其实写一个个人网站是一个已经酝酿许久的想法, 但是一直太懒, 也没有时间;), 所以就耽搁下了。这次趁着在法国生活即将结束之际, 偷懒地用github把这个小计划也实现了。以后会在这里写些技术文章, 机器学习, 算法, AI估计都会有, 希望能和大家共同进步吧, 和一些无病呻吟的文章, 毕竟生活还需要记录和一些仪式感。马上就要回国了, 总算可以专心写代码学算法了, 之前学的时候都太仓促, 以后要">
+<meta property="og:description" content="变量和占位符计算图TensorFlow 是一种采用数据流图（data flow graphs），用于数值计算的开源软件库。其中 Tensor 代表传递的数据为张量（多维数组），Flow 代表使用计算图进行运算。数据流图用「结点」（nodes）和「边」（edges）组成的有向图来描述数学运算。「结点」一般用来表示施加的数学操作，但也可以表示数据输入的起点和输出的终点，或者是读取/写入持久变量（pe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-05T22:19:45.981Z">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-9/15956860.jpg">
+<meta property="og:updated_time" content="2018-03-08T17:02:59.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写在开始">
-<meta name="twitter:description" content="其实写一个个人网站是一个已经酝酿许久的想法, 但是一直太懒, 也没有时间;), 所以就耽搁下了。这次趁着在法国生活即将结束之际, 偷懒地用github把这个小计划也实现了。以后会在这里写些技术文章, 机器学习, 算法, AI估计都会有, 希望能和大家共同进步吧, 和一些无病呻吟的文章, 毕竟生活还需要记录和一些仪式感。马上就要回国了, 总算可以专心写代码学算法了, 之前学的时候都太仓促, 以后要">
+<meta name="twitter:title" content="Tensorflow学习笔记二">
+<meta name="twitter:description" content="变量和占位符计算图TensorFlow 是一种采用数据流图（data flow graphs），用于数值计算的开源软件库。其中 Tensor 代表传递的数据为张量（多维数组），Flow 代表使用计算图进行运算。数据流图用「结点」（nodes）和「边」（edges）组成的有向图来描述数学运算。「结点」一般用来表示施加的数学操作，但也可以表示数据输入的起点和输出的终点，或者是读取/写入持久变量（pe">
+<meta name="twitter:image" content="http://p59louklr.bkt.clouddn.com/18-3-9/15956860.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://czx.im/2018/03/05/写在开始/"/>
+  <link rel="canonical" href="http://czx.im/2018/03/08/Tensorflow学习笔记二/"/>
 
 
 
 
 
-  <title>写在开始 | 简单点</title>
+  <title>Tensorflow学习笔记二 | 简单点</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://czx.im/2018/03/05/写在开始/">
+    <link itemprop="mainEntityOfPage" href="http://czx.im/2018/03/08/Tensorflow学习笔记二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zixiang CAI">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">写在开始</h1>
+          <h1 class="post-title" itemprop="name headline">Tensorflow学习笔记二</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T22:38:12+01:00">
-                2018-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-08T17:50:02+01:00">
+                2018-03-08
               </time>
             
 
@@ -315,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂记/" itemprop="url" rel="index">
-                    <span itemprop="name">杂记</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -333,9 +335,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/05/写在开始/#comments" itemprop="discussionUrl">
+                <a href="/2018/03/08/Tensorflow学习笔记二/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/05/写在开始/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/03/08/Tensorflow学习笔记二/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -343,7 +345,7 @@
 
           
           
-             <span id="/2018/03/05/写在开始/" class="leancloud_visitors" data-flag-title="写在开始">
+             <span id="/2018/03/08/Tensorflow学习笔记二/" class="leancloud_visitors" data-flag-title="Tensorflow学习笔记二">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,7 +376,9 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><p>其实写一个个人网站是一个已经酝酿许久的想法, 但是一直太懒, 也没有时间;), 所以就耽搁下了。这次趁着在法国生活即将结束之际, 偷懒地用github把这个小计划也实现了。以后会在这里写些技术文章, 机器学习, 算法, AI估计都会有, 希望能和大家共同进步吧, 和一些无病呻吟的文章, 毕竟生活还需要记录和一些仪式感。<br>马上就要回国了, 总算可以专心写代码学算法了, 之前学的时候都太仓促, 以后要多总结下。<br>最后, 要把写博客的习惯坚持下去。<br>以上</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="变量和占位符"><a href="#变量和占位符" class="headerlink" title="变量和占位符"></a>变量和占位符</h2><h2 id="计算图"><a href="#计算图" class="headerlink" title="计算图"></a>计算图</h2><p>TensorFlow 是一种采用数据流图（data flow graphs），用于数值计算的开源软件库。其中 Tensor 代表传递的数据为张量（多维数组），Flow 代表使用计算图进行运算。数据流图用「结点」（nodes）和「边」（edges）组成的有向图来描述数学运算。「结点」一般用来表示施加的数学操作，但也可以表示数据输入的起点和输出的终点，或者是读取/写入持久变量（persistent variable）的终点。边表示结点之间的输入/输出关系。这些数据边可以传送维度可动态调整的多维数据数组，即张量（tensor）。<br>简单来说，计算图定义了从input到output过程中张量所经过的计算和变化。在tensorflow中用的是静态图。静态的意思就是计算图的声明和执行是分开的，我们接下来可以看到使用tf之前，整个计算的流程就已经被设计好了。这份计算图一般会包含计算执行顺序和内存空间分配的策略，这些策略的制定一般是这个过程中最消耗时间的部分；执行阶段构建的图叫实体计算图，这个过程包括为参数和中间结果实际分配内存空间，并按照当前需求进行计算等，数据就在这张实体计算图中计算和传递。<br>而PyTorch用的则是动态图，声明和执行一起进行的。<br>上代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> numpy</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">rng = numpy.random</span><br><span class="line"></span><br><span class="line"><span class="comment"># Parameters</span></span><br><span class="line">learning_rate = <span class="number">0.01</span></span><br><span class="line">training_epochs = <span class="number">2000</span></span><br><span class="line">display_step = <span class="number">50</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Training Data</span></span><br><span class="line">train_X = numpy.asarray([<span class="number">3.3</span>,<span class="number">4.4</span>,<span class="number">5.5</span>,<span class="number">6.71</span>,<span class="number">6.93</span>,<span class="number">4.168</span>,<span class="number">9.779</span>,<span class="number">6.182</span>,<span class="number">7.59</span>,<span class="number">2.167</span>,<span class="number">7.042</span>,<span class="number">10.791</span>,<span class="number">5.313</span>,<span class="number">7.997</span>,<span class="number">5.654</span>,<span class="number">9.27</span>,<span class="number">3.1</span>])</span><br><span class="line">train_Y = numpy.asarray([<span class="number">1.7</span>,<span class="number">2.76</span>,<span class="number">2.09</span>,<span class="number">3.19</span>,<span class="number">1.694</span>,<span class="number">1.573</span>,<span class="number">3.366</span>,<span class="number">2.596</span>,<span class="number">2.53</span>,<span class="number">1.221</span>,<span class="number">2.827</span>,<span class="number">3.465</span>,<span class="number">1.65</span>,<span class="number">2.904</span>,<span class="number">2.42</span>,<span class="number">2.94</span>,<span class="number">1.3</span>])</span><br><span class="line">n_samples = train_X.shape[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># tf Graph Input</span></span><br><span class="line">X = tf.placeholder(<span class="string">"float"</span>)</span><br><span class="line">Y = tf.placeholder(<span class="string">"float"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create Model</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Set model weights</span></span><br><span class="line">W = tf.Variable(rng.randn(), name=<span class="string">"weight"</span>)</span><br><span class="line">b = tf.Variable(rng.randn(), name=<span class="string">"bias"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Construct a linear model</span></span><br><span class="line">activation = tf.add(tf.multiply(X, W), b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Minimize the squared errors</span></span><br><span class="line">cost = tf.reduce_sum(tf.pow(activation-Y, <span class="number">2</span>))/(<span class="number">2</span>*n_samples) <span class="comment">#L2 loss</span></span><br><span class="line">optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost) <span class="comment">#Gradient descent</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Initializing the variables</span></span><br><span class="line">init = tf.initialize_all_variables()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Launch the graph</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Fit all training data</span></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> range(training_epochs):</span><br><span class="line">        <span class="keyword">for</span> (x, y) <span class="keyword">in</span> zip(train_X, train_Y):</span><br><span class="line">            sess.run(optimizer, feed_dict=&#123;X: x, Y: y&#125;)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#Display logs per epoch step</span></span><br><span class="line">        <span class="keyword">if</span> epoch % display_step == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">print</span> (<span class="string">"Epoch:"</span>, <span class="string">'%04d'</span> % (epoch+<span class="number">1</span>), <span class="string">"cost="</span>, \</span><br><span class="line">                <span class="string">"&#123;:.9f&#125;"</span>.format(sess.run(cost, feed_dict=&#123;X: train_X, Y:train_Y&#125;)), \</span><br><span class="line">                <span class="string">"W="</span>, sess.run(W), <span class="string">"b="</span>, sess.run(b))</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"Optimization Finished!"</span>)</span><br><span class="line">    print(<span class="string">"cost="</span>, sess.run(cost, feed_dict=&#123;X: train_X, Y: train_Y&#125;), \</span><br><span class="line">          <span class="string">"W="</span>, sess.run(W), <span class="string">"b="</span>, sess.run(b))</span><br><span class="line"></span><br><span class="line">    <span class="comment">#Graphic display</span></span><br><span class="line">    plt.plot(train_X, train_Y, <span class="string">'ro'</span>, label=<span class="string">'Original data'</span>)</span><br><span class="line">    plt.plot(train_X, sess.run(W) * train_X + sess.run(b), label=<span class="string">'Fitted line'</span>)</span><br><span class="line">    plt.legend()</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://p59louklr.bkt.clouddn.com/18-3-9/15956860.jpg" alt=""></p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><a href="https://zhuanlan.zhihu.com/p/29936078" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29936078</a><br><a href="https://zhuanlan.zhihu.com/p/25216368" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25216368</a><br><a href="https://github.com/aymericdamien/TensorFlow-Examples/" target="_blank" rel="noopener">https://github.com/aymericdamien/TensorFlow-Examples/</a></p>
 
       
     </div>
@@ -421,7 +425,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/无病呻吟/" rel="tag"># 无病呻吟</a>
+            <a href="/tags/Tensorflow/" rel="tag"># Tensorflow</a>
           
         </div>
       
@@ -434,15 +438,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/08/Tensorflow学习笔记一/" rel="next" title="Tensorflow学习笔记一">
+                <i class="fa fa-chevron-left"></i> Tensorflow学习笔记一
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/06/2018机器学习实习面试知识点整理/" rel="prev" title="2018机器学习实习面试知识点整理">
-                2018机器学习实习面试知识点整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -532,8 +536,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -597,6 +610,22 @@ var jiathis_config={
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量和占位符"><span class="nav-number">1.</span> <span class="nav-text">变量和占位符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算图"><span class="nav-number">2.</span> <span class="nav-text">计算图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -776,9 +805,9 @@ var jiathis_config={
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://czx.im/2018/03/05/写在开始/';
-          this.page.identifier = '2018/03/05/写在开始/';
-          this.page.title = '写在开始';
+          this.page.url = 'http://czx.im/2018/03/08/Tensorflow学习笔记二/';
+          this.page.identifier = '2018/03/08/Tensorflow学习笔记二/';
+          this.page.title = 'Tensorflow学习笔记二';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://caizixiang.disqus.com/embed.js';
