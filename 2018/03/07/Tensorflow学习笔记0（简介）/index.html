@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的学习，所以关于神经网络方面的">
+<meta name="description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
 <meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tensorflow学习笔记0（简介）">
 <meta property="og:url" content="http://czx.im/2018/03/07/Tensorflow学习笔记0（简介）/index.html">
 <meta property="og:site_name" content="简单点">
-<meta property="og:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的学习，所以关于神经网络方面的">
+<meta property="og:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-09T09:07:44.156Z">
+<meta property="og:updated_time" content="2018-03-09T09:12:12.789Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow学习笔记0（简介）">
-<meta name="twitter:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的学习，所以关于神经网络方面的">
+<meta name="twitter:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
 
 
 
@@ -374,7 +374,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。<br>这一系列笔记主要针对的是tf模型和api的学习，所以关于神经网络方面的内容就不深入了数据类型，比如 float32</p>
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。<br>这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的内容就不深入了写了。</p>
 <h2 id="笔记目录"><a href="#笔记目录" class="headerlink" title="笔记目录"></a>笔记目录</h2><ul>
 <li>tf基本元素</li>
 <li>变量与计算图搭建</li>
