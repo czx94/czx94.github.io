@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-10/38547884.jpg">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-10/51077672.jpg">
-<meta property="og:updated_time" content="2018-03-11T12:26:53.599Z">
+<meta property="og:updated_time" content="2018-03-11T12:29:52.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow学习笔记5(Alexnet实现）">
 <meta name="twitter:description" content="Alexnet说好了不说神经网络的内容，但是Alexnet确实太经典太重要了，可以说这一波AI的崛起就是从这个模型开始的，还是得说两句。ImageNet Classification with Deep Convolutional Neural Networks是Hinton和他的学生Alex Krizhevsky在12年ImageNet Challenge使用的模型结构，刷新了Image Cl">
@@ -394,8 +394,6 @@
 第三层、第四层都没有LRN和pool，第五层只有pool，其中第三层使用384个kernels（3*3*384，pad_size=(1,1),得到384*15*15，kernel_size为（3，3),以1个pixel为步长，得到384*13*13）；第四层使用384个kernels（pad_size(1,1)得到384*15*15，核大小为（3，3）步长为1个pixel，得到384*13*13）；第五层使用256个kernels（pad_size(1,1)得到384*15*15，kernel_size(3,3)，得到256*13*13，pool_size(3，3）步长2个pixels，得到256*6*6）。
 全连接层： 前两层分别有4096个神经元，最后输出softmax为1000个（ImageNet），注意caffe图中全连接层中有relu、dropout、innerProduct。
 </code></pre><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><a href="https://zhuanlan.zhihu.com/p/30486789" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30486789</a><br><a href="http://www.cnblogs.com/52machinelearning/p/5821591.html" target="_blank" rel="noopener">http://www.cnblogs.com/52machinelearning/p/5821591.html</a></p>
-<p><div id="hypercomments_widget"></div></p>
-<p><script type="text/javascript"><br>_hcwp = window._hcwp || [];<br>_hcwp.push({widget:”Stream”, widget_id: 102317});<br>(function() {<br>if(“HC_LOAD_INIT” in window)return;<br>HC_LOAD_INIT = true;<br>var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || “en”).substr(0, 2).toLowerCase();<br>var hcc = document.createElement(“script”); hcc.type = “text/javascript”; hcc.async = true;<br>hcc.src = (“https:” == document.location.protocol ? “https” : “http”)+”://w.hypercomments.com/widget/hc/102317/“+lang+”/widget.js”;<br>var s = document.getElementsByTagName(“script”)[0];<br>s.parentNode.insertBefore(hcc, s.nextSibling);<br>})();<br></script><br><a href="http://hypercomments.com" rel="noopener" class="hc-link" title="comments widget" target="_blank">comments powered by HyperComments</a></p>
 
       
     </div>
