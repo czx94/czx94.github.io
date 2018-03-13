@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[特征点检测]]></title>
     <url>%2F2018%2F03%2F13%2FInterest-Point-Detection%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[Harris角点检测LoG(Laplacian of Gaussian)算子DoG(Difference of Gaussian)算子]]></content>
       <categories>
         <category>笔记</category>
       </categories>
