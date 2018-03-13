@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czx.im/"/>
-  <updated>2018-03-13T15:47:11.064Z</updated>
+  <updated>2018-03-13T15:47:42.996Z</updated>
   <id>http://czx.im/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Interest_Point_Detection</title>
+    <title>特征点检测</title>
     <link href="http://czx.im/2018/03/13/Interest-Point-Detection/"/>
     <id>http://czx.im/2018/03/13/Interest-Point-Detection/</id>
     <published>2018-03-13T15:44:57.000Z</published>
-    <updated>2018-03-13T15:47:11.064Z</updated>
+    <updated>2018-03-13T15:47:42.996Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
     
