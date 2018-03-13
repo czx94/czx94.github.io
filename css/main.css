@@ -1938,7 +1938,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #dee274;
+  background: #e7057e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3058,6 +3058,11 @@ hr {
 }
 .with-love {
   color: #ffc7c7;
+}
+.main-inner {
+  margin-top: 60px;
+  background: #fff;
+  min-height: 500px;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
