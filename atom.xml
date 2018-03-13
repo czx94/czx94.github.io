@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://czx.im/"/>
-  <updated>2018-03-11T12:29:52.535Z</updated>
+  <updated>2018-03-13T15:47:11.064Z</updated>
   <id>http://czx.im/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Interest_Point_Detection</title>
+    <link href="http://czx.im/2018/03/13/Interest-Point-Detection/"/>
+    <id>http://czx.im/2018/03/13/Interest-Point-Detection/</id>
+    <published>2018-03-13T15:44:57.000Z</published>
+    <updated>2018-03-13T15:47:11.064Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://czx.im/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Computer Vision" scheme="http://czx.im/tags/Computer-Vision/"/>
+    
+  </entry>
   
   <entry>
     <title>Tensorflow学习笔记5(Alexnet实现）</title>
@@ -146,7 +171,7 @@
     <link href="http://czx.im/2018/03/07/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00%EF%BC%88%E7%AE%80%E4%BB%8B%EF%BC%89/"/>
     <id>http://czx.im/2018/03/07/Tensorflow学习笔记0（简介）/</id>
     <published>2018-03-07T09:02:23.000Z</published>
-    <updated>2018-03-09T14:09:39.192Z</updated>
+    <updated>2018-03-13T15:46:59.652Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。<br>这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的内容就不深入了写了。</p><h2 id="笔记目录"><a href="#笔记目录" class="headerlink" title="笔记目录"></a>笔记目录</h2><ul><li>tf基本元素</li><li>变量与计算图搭建</li><li>mnist和cnn</li><li>tensorboard可视化</li><li>Alexnet</li><li>tf.slim</li><li>VGG</li><li>Resnet<div class="aplayer" data-id="864701453" data-server="netease" data-type="playlist" data-mode="random"></div></li></ul>]]></content>
     
@@ -163,6 +188,8 @@
     
     
       <category term="Tensorflow" scheme="http://czx.im/tags/Tensorflow/"/>
+    
+      <category term="Deeplearning" scheme="http://czx.im/tags/Deeplearning/"/>
     
   </entry>
   

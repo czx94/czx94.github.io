@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://czx.im/2018/03/13/Interest-Point-Detection/</loc>
+    <lastmod>2018-03-13T15:47:11.064Z</lastmod>
+    <data>
+        <display>
+        <title>Interest_Point_Detection</title>
+        <pubTime>2018-03-13T15:44:57.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://czx.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://czx.im/2018/03/07/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00%EF%BC%88%E7%AE%80%E4%BB%8B%EF%BC%89/</loc>
+    <lastmod>2018-03-13T15:46:59.652Z</lastmod>
+    <data>
+        <display>
+        <title>Tensorflow学习笔记0（简介）</title>
+        <pubTime>2018-03-07T09:02:23.000Z</pubTime>
+        
+        <tag>Tensorflow</tag>
+         
+        <tag>Deeplearning</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://czx.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://czx.im/2018/03/08/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03(mnist%E5%92%8Ccnn)/</loc>
     <lastmod>2018-03-13T14:54:02.890Z</lastmod>
     <data>
@@ -70,26 +112,6 @@
         <display>
         <title>Tensorflow学习笔记4(Tensorboard与可视化）</title>
         <pubTime>2018-03-09T08:32:55.000Z</pubTime>
-        
-        <tag>Tensorflow</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://czx.im/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://czx.im/2018/03/07/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00%EF%BC%88%E7%AE%80%E4%BB%8B%EF%BC%89/</loc>
-    <lastmod>2018-03-09T14:09:39.192Z</lastmod>
-    <data>
-        <display>
-        <title>Tensorflow学习笔记0（简介）</title>
-        <pubTime>2018-03-07T09:02:23.000Z</pubTime>
         
         <tag>Tensorflow</tag>
          

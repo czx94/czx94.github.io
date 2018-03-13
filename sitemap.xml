@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czx.im/2018/03/13/Interest-Point-Detection/</loc>
+    
+    <lastmod>2018-03-13T15:47:11.064Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czx.im/2018/03/07/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00%EF%BC%88%E7%AE%80%E4%BB%8B%EF%BC%89/</loc>
+    
+    <lastmod>2018-03-13T15:46:59.652Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czx.im/2018/03/08/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03(mnist%E5%92%8Ccnn)/</loc>
     
     <lastmod>2018-03-13T14:54:02.890Z</lastmod>
@@ -26,13 +40,6 @@
     <loc>http://czx.im/2018/03/09/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04(Tensorboard%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%89/</loc>
     
     <lastmod>2018-03-09T23:17:41.903Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czx.im/2018/03/07/Tensorflow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B00%EF%BC%88%E7%AE%80%E4%BB%8B%EF%BC%89/</loc>
-    
-    <lastmod>2018-03-09T14:09:39.192Z</lastmod>
     
   </url>
   
