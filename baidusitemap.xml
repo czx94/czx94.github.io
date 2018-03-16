@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://czx.im/2018/03/13/Interest-Point-Detection/</loc>
-    <lastmod>2018-03-14T22:46:38.388Z</lastmod>
+    <lastmod>2018-03-16T22:07:14.842Z</lastmod>
     <data>
         <display>
         <title>特征点检测</title>
@@ -14,6 +14,28 @@
         <tag>Computer Vision</tag>
          
         <tag>Point detection</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔记" url="http://czx.im/categories/%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://czx.im/2018/03/15/feature-point-description-and-matching/</loc>
+    <lastmod>2018-03-15T22:40:50.105Z</lastmod>
+    <data>
+        <display>
+        <title>特征点描述和匹配</title>
+        <pubTime>2018-03-15T09:46:56.000Z</pubTime>
+        
+        <tag>Computer Vision</tag>
+         
+        <tag>Point matching</tag>
          
          
            

@@ -118,9 +118,10 @@
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-14/43747394.jpg">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-14/39765063.jpg">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-15/49585039.jpg">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-17/67261430.jpg">
 <meta property="og:image" content="https://i.loli.net/2017/12/18/5a3741bdd1528.jpg">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-14/90871784.jpg">
-<meta property="og:updated_time" content="2018-03-14T22:46:38.388Z">
+<meta property="og:updated_time" content="2018-03-16T22:07:14.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="特征点检测">
 <meta name="twitter:description" content="特征点检测有啥用？特征点检测广泛应用到目标匹配、目标跟踪、三维重建等应用中，在进行目标建模时会对图像进行目标特征的提取，常用的有颜色、角点、特征点、轮廓、纹理等特征。我们有这两张图片，想要把他们拼成一张，比如常用的全景照片。这个过程一共有三步，首先检测出两张图片特征点，然后再把对应的特征点配对，最后进行图像拼接。因为我们不可能把两张图所有的对应点都找出来，这在复杂度上很不划算，而且也不好实现。图">
@@ -446,7 +447,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,544
+                  2,554
                 </span>
               
 
@@ -502,7 +503,7 @@
 </li>
 </ul>
 <p>效果如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-15/54197302.jpg" alt=""></p>
-<h2 id="DoG"><a href="#DoG" class="headerlink" title="DoG"></a>DoG</h2><p>下面是LoG和DoG的公式：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/43747394.jpg" alt=""><br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/39765063.jpg" alt=""><br>LoG计算可以利用DoG来近似，其中差分是由两个高斯滤波与不同变量的卷积结果逼近求得。证明如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-15/49585039.jpg" alt=""><br>从滤波器的角度来理解，高斯滤波器是低通滤波器，两个低通滤波器的差可以构成一个带通滤波器（LoG是带通滤波器）。<br>从函数图像上来看两种方法也是非常接近了。但是用差分的方法明显在计算上要简单很多。<br><img src="https://i.loli.net/2017/12/18/5a3741bdd1528.jpg" alt=""><br>DoG的效果如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/90871784.jpg" alt=""><br>当然DoG并不止是简单的一个近似，作为一个增强算法，DOG可以被用来增加边缘和其他细节的可见性，大部分的边缘算子使用增强高频信号的方法，但是因为随机噪声也是高频信号，很多锐化算子也增强了噪声。DOG算法去除的高频信号中通常包含了随机噪声，所以这种方法是最适合处理那些有高频噪声的图像。这个算法的一个主要缺点就是在调整图像对比度的过程中信息量会减少。<br>当它被用于图像增强时，DoG算法中两个高斯核的半径之比通常为4:1或5:1。当k设为1.6时，即为高斯拉普拉斯算子的近似。高斯拉普拉斯算子在多尺度多分辨率像片中，用于近似高斯拉普拉斯算子两个高斯核的确切大小决定了两个高斯模糊后的影像间的尺度。<br>DoG也被用于尺度不变特征变换中的斑点检测。事实上，DoG算法作为两个多元正态分布的差通常总额为零，把它和一个恒定信号进行卷积没有意义。当K约等于1.6时它很好的近似了高斯拉普拉斯变换，当K约等于5时又很好的近似了视网膜上神经节细胞的视野。它可以很好的作为一个实时斑点检测算子和尺度选择算子应用于递归程序。</p>
+<h2 id="DoG"><a href="#DoG" class="headerlink" title="DoG"></a>DoG</h2><p>下面是LoG和DoG的公式：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/43747394.jpg" alt=""><br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/39765063.jpg" alt=""><br>LoG计算可以利用DoG来近似，其中差分是由两个高斯滤波与不同变量的卷积结果逼近求得。证明如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-15/49585039.jpg" alt=""><br>看到另一个好玩的近似：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-17/67261430.jpg" alt=""><br>从滤波器的角度来理解，高斯滤波器是低通滤波器，两个低通滤波器的差可以构成一个带通滤波器（LoG是带通滤波器）。<br>从函数图像上来看两种方法也是非常接近了。但是用差分的方法明显在计算上要简单很多。<br><img src="https://i.loli.net/2017/12/18/5a3741bdd1528.jpg" alt=""><br>DoG的效果如下：<br><img src="http://p59louklr.bkt.clouddn.com/18-3-14/90871784.jpg" alt=""><br>当然DoG并不止是简单的一个近似，作为一个增强算法，DOG可以被用来增加边缘和其他细节的可见性，大部分的边缘算子使用增强高频信号的方法，但是因为随机噪声也是高频信号，很多锐化算子也增强了噪声。DOG算法去除的高频信号中通常包含了随机噪声，所以这种方法是最适合处理那些有高频噪声的图像。这个算法的一个主要缺点就是在调整图像对比度的过程中信息量会减少。<br>当它被用于图像增强时，DoG算法中两个高斯核的半径之比通常为4:1或5:1。当k设为1.6时，即为高斯拉普拉斯算子的近似。高斯拉普拉斯算子在多尺度多分辨率像片中，用于近似高斯拉普拉斯算子两个高斯核的确切大小决定了两个高斯模糊后的影像间的尺度。<br>DoG也被用于尺度不变特征变换中的斑点检测。事实上，DoG算法作为两个多元正态分布的差通常总额为零，把它和一个恒定信号进行卷积没有意义。当K约等于1.6时它很好的近似了高斯拉普拉斯变换，当K约等于5时又很好的近似了视网膜上神经节细胞的视野。它可以很好的作为一个实时斑点检测算子和尺度选择算子应用于递归程序。</p>
 <h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><a href="http://www.cnblogs.com/polly333/p/5416172.html" target="_blank" rel="noopener">http://www.cnblogs.com/polly333/p/5416172.html</a><br><a href="http://blog.csdn.net/xiaowei_cqu/article/details/8067881" target="_blank" rel="noopener">http://blog.csdn.net/xiaowei_cqu/article/details/8067881</a><br><a href="https://senitco.github.io/2017/06/20/image-feature-LoG-DoG/" target="_blank" rel="noopener">https://senitco.github.io/2017/06/20/image-feature-LoG-DoG/</a><br><a href="http://skystarry.cn/index.php/2017/04/20/dog/" target="_blank" rel="noopener">http://skystarry.cn/index.php/2017/04/20/dog/</a></p>
 
       
@@ -574,6 +575,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/15/feature-point-description-and-matching/" rel="prev" title="特征点描述和匹配">
+                特征点描述和匹配 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -687,7 +692,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -709,7 +714,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
