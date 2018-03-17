@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Tensorflow,Deeplearning," />
+  <meta name="keywords" content="Tensorflow," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
-<meta name="keywords" content="Tensorflow,Deeplearning">
+<meta name="description" content="MNIST数据集简而言之就是手写数字识别，在所有教程里面都会把这个拿来入门用。这里记录一下自己用fc和CNN在tensorflow上的代码。结果就不重要了，主要为了练手。 读入数据直接从tf模块里读入mnist1234from tensorflow.examples.tutorials.mnist import input_dataimport tensorflow as tf#读入mnist数">
+<meta name="keywords" content="Tensorflow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tensorflow学习笔记0（简介）">
-<meta property="og:url" content="http://czx.im/2018/03/07/Tensorflow学习笔记0（简介）/index.html">
+<meta property="og:title" content="Tensorflow学习笔记3(mnist和cnn)">
+<meta property="og:url" content="http://czx.im/2018/03/08/Tensorflow3/index.html">
 <meta property="og:site_name" content="简单点">
-<meta property="og:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
+<meta property="og:description" content="MNIST数据集简而言之就是手写数字识别，在所有教程里面都会把这个拿来入门用。这里记录一下自己用fc和CNN在tensorflow上的代码。结果就不重要了，主要为了练手。 读入数据直接从tf模块里读入mnist1234from tensorflow.examples.tutorials.mnist import input_dataimport tensorflow as tf#读入mnist数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-13T15:46:59.652Z">
+<meta property="og:updated_time" content="2018-03-13T14:54:02.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tensorflow学习笔记0（简介）">
-<meta name="twitter:description" content="Preface之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的">
+<meta name="twitter:title" content="Tensorflow学习笔记3(mnist和cnn)">
+<meta name="twitter:description" content="MNIST数据集简而言之就是手写数字识别，在所有教程里面都会把这个拿来入门用。这里记录一下自己用fc和CNN在tensorflow上的代码。结果就不重要了，主要为了练手。 读入数据直接从tf模块里读入mnist1234from tensorflow.examples.tutorials.mnist import input_dataimport tensorflow as tf#读入mnist数">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://czx.im/2018/03/07/Tensorflow学习笔记0（简介）/"/>
+  <link rel="canonical" href="http://czx.im/2018/03/08/Tensorflow3/"/>
 
 
 
 
 
-  <title>Tensorflow学习笔记0（简介） | 简单点</title>
+  <title>Tensorflow学习笔记3(mnist和cnn) | 简单点</title>
   
 
 
@@ -315,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://czx.im/2018/03/07/Tensorflow学习笔记0（简介）/">
+    <link itemprop="mainEntityOfPage" href="http://czx.im/2018/03/08/Tensorflow3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zixiang CAI">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Tensorflow学习笔记0（简介）</h1>
+          <h1 class="post-title" itemprop="name headline">Tensorflow学习笔记3(mnist和cnn)</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-07T10:02:23+01:00">
-                2018-03-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-08T22:24:10+01:00">
+                2018-03-08
               </time>
             
 
@@ -386,8 +386,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/07/Tensorflow学习笔记0（简介）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="2018/03/07/Tensorflow学习笔记0（简介）/" itemprop="commentsCount"></span>
+                <a href="/2018/03/08/Tensorflow3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count hc-comment-count" data-xid="2018/03/08/Tensorflow3/" itemprop="commentsCount"></span>
                 </a>
               </span>
               <!--/noindex-->
@@ -396,7 +396,7 @@
 
           
           
-             <span id="/2018/03/07/Tensorflow学习笔记0（简介）/" class="leancloud_visitors" data-flag-title="Tensorflow学习笔记0（简介）">
+             <span id="/2018/03/08/Tensorflow3/" class="leancloud_visitors" data-flag-title="Tensorflow学习笔记3(mnist和cnn)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  185
+                  809
                 </span>
               
 
@@ -437,7 +437,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -458,18 +458,12 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>之前其实也用了快一年Tensorflow, 但是实际上很多具体的实现并没有很清楚, 所以决定从头学一遍，边学变记吧。会参考一些别的教程，结合自己的理解，把学习的内容整理下来和大家分享。从基本的变量，计算图的搭建开始，后面实现一些常用的网络结构，Alexnet， VGG， Resnet之类。争取一个月之内全部更完。<br>这一系列笔记主要针对的是tf模型和api的复习，所以关于神经网络方面的内容就不深入了写了。</p>
-<h2 id="笔记目录"><a href="#笔记目录" class="headerlink" title="笔记目录"></a>笔记目录</h2><ul>
-<li>tf基本元素</li>
-<li>变量与计算图搭建</li>
-<li>mnist和cnn</li>
-<li>tensorboard可视化</li>
-<li>Alexnet</li>
-<li>tf.slim</li>
-<li>VGG</li>
-<li>Resnet<div class="aplayer" data-id="864701453" data-server="netease" data-type="playlist" data-mode="random"></div>
-</li>
-</ul>
+        <script src="/assets/js/APlayer.min.js"> </script><h2 id="MNIST数据集"><a href="#MNIST数据集" class="headerlink" title="MNIST数据集"></a>MNIST数据集</h2><p>简而言之就是手写数字识别，在所有教程里面都会把这个拿来入门用。这里记录一下自己用fc和CNN在tensorflow上的代码。结果就不重要了，主要为了练手。</p>
+<h2 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h2><p>直接从tf模块里读入mnist<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.examples.tutorials.mnist <span class="keyword">import</span> input_data</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="comment">#读入mnist数据集</span></span><br><span class="line">mnist = input_data.read_data_sets(<span class="string">"MNIST_data/"</span>, one_hot=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="一层全连接网络"><a href="#一层全连接网络" class="headerlink" title="一层全连接网络"></a>一层全连接网络</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#变量声明</span></span><br><span class="line">x = tf.placeholder(<span class="string">'float'</span>,[<span class="keyword">None</span>, <span class="number">784</span>]) <span class="comment">#None 为了留给后面的batch_size</span></span><br><span class="line">y = tf.placeholder(<span class="string">'float'</span>,[<span class="keyword">None</span>, <span class="number">10</span>])</span><br><span class="line">W = tf.Variable(tf.zeros([<span class="number">784</span>,<span class="number">10</span>]))</span><br><span class="line">b = tf.Variable(tf.zeros([<span class="number">10</span>]))</span><br><span class="line"><span class="comment">#计算图</span></span><br><span class="line">y = tf.nn.softmax(tf.matmul(x, W)+b)</span><br><span class="line">loss = -tf.reduce_sum(y_*tf.log(y))</span><br><span class="line">train_step = tf.train.AdamOptimizer(<span class="number">0.01</span>).minimize(loss)</span><br><span class="line">correct_prediction = tf.equal(tf.argmax(y,<span class="number">1</span>), tf.argmax(y_,<span class="number">1</span>))</span><br><span class="line">accuracy = tf.reduce_mean(correct_prediction, <span class="string">'float'</span>)</span><br><span class="line"><span class="comment">#初始化变量</span></span><br><span class="line">init = tf.global_variables_initializer()</span><br><span class="line"><span class="comment"># 开始训练</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1000</span>):</span><br><span class="line">        x_batch, y_batch = mnist.train.next_batch(<span class="number">50</span>)</span><br><span class="line">        sess.run(train_step, feed_dict=&#123;x: x_batch, y_: y_batch&#125;)</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">            print(sess.run(accuracy, feed_dict=&#123;x: x_batch, y_: y_batch&#125;))</span><br><span class="line"><span class="comment">#测试</span></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"test accuracy %g"</span>%accuracy.eval(feed_dict=&#123;</span><br><span class="line">        x: mnist.test.images, y_: mnist.test.labels&#125;))</span><br></pre></td></tr></table></figure>
+<h2 id="卷积网络"><a href="#卷积网络" class="headerlink" title="卷积网络"></a>卷积网络</h2><p>原理和结构很简单，但是自己写还是容易错，写一遍就当复习了。也是有段时间没有写tf底层的结构了。<br>初始化变量，这里用了两层卷积加两层fc，最后softmax分类。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 变量声明</span></span><br><span class="line"><span class="comment">#输入输出占位变量</span></span><br><span class="line">x = tf.placeholder(<span class="string">'float'</span>, [<span class="keyword">None</span>, <span class="number">784</span>])  <span class="comment"># None 为了留给后面的batch_size</span></span><br><span class="line">y_ = tf.placeholder(<span class="string">'float'</span>, [<span class="keyword">None</span>, <span class="number">10</span>])</span><br><span class="line"><span class="comment">#这里是两层卷积，都用5*5卷积核</span></span><br><span class="line">w_conv1 = tf.Variable(tf.truncated_normal([<span class="number">5</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">32</span>], stddev=<span class="number">0.1</span>))</span><br><span class="line">b1 = tf.Variable(tf.constant(<span class="number">0.1</span>, shape = [<span class="number">32</span>]))</span><br><span class="line">w_conv2 = tf.Variable(tf.truncated_normal([<span class="number">5</span>,<span class="number">5</span>,<span class="number">32</span>,<span class="number">64</span>], stddev=<span class="number">0.1</span>))</span><br><span class="line">b2 = tf.Variable(tf.constant(<span class="number">0.1</span>, shape = [<span class="number">64</span>]))</span><br><span class="line"><span class="comment">#接两层全连接</span></span><br><span class="line">w_fc1 = tf.Variable(tf.truncated_normal([<span class="number">7</span>*<span class="number">7</span>*<span class="number">64</span>, <span class="number">1024</span>], stddev=<span class="number">0.1</span>))</span><br><span class="line">b_fc1 = tf.Variable(tf.constant(<span class="number">0.1</span>, shape = [<span class="number">1024</span>]))</span><br><span class="line">W_fc2 = tf.Variable(tf.truncated_normal([<span class="number">1024</span>, <span class="number">10</span>], stddev=<span class="number">0.1</span>))</span><br><span class="line">b_fc2 = tf.Variable(tf.constant(<span class="number">0.1</span>, shape = [<span class="number">10</span>]))</span><br><span class="line"><span class="comment">#引入dropout</span></span><br><span class="line">keep_prob = tf.placeholder(<span class="string">"float"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#计算图</span></span><br><span class="line"><span class="comment">#先把输入reshape成一个二维变量</span></span><br><span class="line">x_image = tf.reshape(x, [<span class="number">-1</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>])</span><br><span class="line"><span class="comment">#第一层卷积，用relu作activation</span></span><br><span class="line">conv1 = tf.nn.relu(tf.nn.conv2d(x_image, w_conv1, strides=[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>], padding=<span class="string">'SAME'</span>))</span><br><span class="line">pool1 = tf.nn.max_pool(conv1, ksize=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>], strides=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>], padding=<span class="string">'SAME'</span>)</span><br><span class="line"><span class="comment">#第二层卷积</span></span><br><span class="line">conv2 = tf.nn.relu(tf.nn.conv2d(pool1, w_conv2, strides=[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>], padding=<span class="string">'SAME'</span>))</span><br><span class="line">pool2 = tf.nn.max_pool(conv2, ksize=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>], strides=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>], padding=<span class="string">'SAME'</span>)</span><br><span class="line"><span class="comment">#flatten后接到全连接层</span></span><br><span class="line">pool2_flat = tf.reshape(pool2, [<span class="number">-1</span>, <span class="number">7</span>*<span class="number">7</span>*<span class="number">64</span>])</span><br><span class="line">fc1 = tf.nn.relu(tf.matmul(pool2_flat,w_fc1) + b_fc1)</span><br><span class="line"><span class="comment">#最后用softmax分类</span></span><br><span class="line">y = tf.nn.softmax(tf.matmul(fc1, W_fc2) + b_fc2)</span><br><span class="line"><span class="comment">#同之前的网络</span></span><br><span class="line">loss = -tf.reduce_sum(y_ * tf.log(y))</span><br><span class="line">train_step = tf.train.AdamOptimizer(<span class="number">1e-4</span>).minimize(loss)</span><br><span class="line">correct_prediction = tf.equal(tf.argmax(y, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</span><br><span class="line">accuracy = tf.reduce_mean(tf.cast(correct_prediction, <span class="string">'float'</span>))</span><br><span class="line"><span class="comment"># 初始化变量</span></span><br><span class="line">init = tf.global_variables_initializer()</span><br><span class="line"><span class="comment"># 开始训练</span></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10000</span>):</span><br><span class="line">        x_batch, y_batch = mnist.train.next_batch(<span class="number">50</span>)</span><br><span class="line">        sess.run(train_step, feed_dict=&#123;x: x_batch, y_: y_batch&#125;)</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">            print(sess.run(accuracy, feed_dict=&#123;x: x_batch, y_: y_batch&#125;))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">print</span> (<span class="string">"test accuracy %g"</span>%accuracy.eval(feed_dict=&#123;</span><br><span class="line">        x: mnist.test.images, y_: mnist.test.labels&#125;))</span><br></pre></td></tr></table></figure></p>
+<p>大功告成，tf还是要多写，不然容易漏东西。</p>
+<div id="music163player"><br>    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=38358214&auto=0&height=66"><br>    </iframe><br></div>
 
       
     </div>
@@ -518,8 +512,6 @@
           
             <a href="/tags/Tensorflow/" rel="tag"><i class="fa fa-tag"></i> Tensorflow</a>
           
-            <a href="/tags/Deeplearning/" rel="tag"><i class="fa fa-tag"></i> Deeplearning</a>
-          
         </div>
       
 
@@ -531,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/06/2018机器学习实习面试知识点整理/" rel="next" title="2018机器学习实习面试知识点整理">
-                <i class="fa fa-chevron-left"></i> 2018机器学习实习面试知识点整理
+              <a href="/2018/03/08/Tensorflow2/" rel="next" title="Tensorflow学习笔记2(变量与计算图搭建)">
+                <i class="fa fa-chevron-left"></i> Tensorflow学习笔记2(变量与计算图搭建)
               </a>
             
           </div>
@@ -541,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/08/Tensorflow学习笔记1(Tensor和基本计算）/" rel="prev" title="Tensorflow学习笔记1(Tensor和基本计算）">
-                Tensorflow学习笔记1(Tensor和基本计算） <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/09/Tensorflow4/" rel="prev" title="Tensorflow学习笔记4(Tensorboard与可视化）">
+                Tensorflow学习笔记4(Tensorboard与可视化） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -718,7 +710,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preface"><span class="nav-number">1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#笔记目录"><span class="nav-number">2.</span> <span class="nav-text">笔记目录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MNIST数据集"><span class="nav-number">1.</span> <span class="nav-text">MNIST数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读入数据"><span class="nav-number">2.</span> <span class="nav-text">读入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一层全连接网络"><span class="nav-number">3.</span> <span class="nav-text">一层全连接网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#卷积网络"><span class="nav-number">4.</span> <span class="nav-text">卷积网络</span></a></li></ol></div>
             
 
           </div>
@@ -918,7 +910,7 @@ show_date_time();
 		_hcwp.push({widget:"Bloggerstream", widget_id: 102317, selector:".hc-comment-count", label: "{\%COUNT%\}" });
 
 		
-		_hcwp.push({widget:"Stream", widget_id: 102317, xid: "2018/03/07/Tensorflow学习笔记0（简介）/"});
+		_hcwp.push({widget:"Stream", widget_id: 102317, xid: "2018/03/08/Tensorflow3/"});
 		
 
 		(function() {
