@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czx.im/2018/03/10/Tensorflow5/</loc>
+    
+    <lastmod>2018-03-18T10:21:28.167Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czx.im/2018/03/13/Interest-Point-Detection/</loc>
     
     <lastmod>2018-03-16T22:18:47.550Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://czx.im/2018/03/05/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/</loc>
     
     <lastmod>2018-03-12T08:46:59.699Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czx.im/2018/03/10/Tensorflow5/</loc>
-    
-    <lastmod>2018-03-11T12:29:52.535Z</lastmod>
     
   </url>
   
