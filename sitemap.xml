@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czx.im/2018/03/15/local-feature-description-and-matching/</loc>
+    
+    <lastmod>2018-03-25T18:24:48.765Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://czx.im/2018/03/23/edge-detection/</loc>
+    
+    <lastmod>2018-03-23T19:04:44.489Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czx.im/2018/03/08/Tensorflow2/</loc>
     
     <lastmod>2018-03-19T07:51:32.822Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://czx.im/2018/03/13/Interest-Point-Detection/</loc>
     
     <lastmod>2018-03-16T22:18:47.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czx.im/2018/03/15/feature-point-description-and-matching/</loc>
-    
-    <lastmod>2018-03-15T22:40:50.105Z</lastmod>
     
   </url>
   
