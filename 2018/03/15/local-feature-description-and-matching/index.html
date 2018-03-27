@@ -96,12 +96,13 @@
 <meta property="og:site_name" content="简单点">
 <meta property="og:description" content="SIFT这篇文章应该会很长。 IntroductionSIFT是由UBC（university of British Column）的教授David Lowe于1999年提出，并在2004年得以完善的一种检测图像关键点（key points , 或者称为图像的interest points(兴趣点) )，并对关键点提取其局部尺度不变特征的描绘子，可以采用这个描绘子进行用于对两幅相关的图像进行匹配">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-26/51678471.jpg">
 <meta property="og:image" content="http://p59louklr.bkt.clouddn.com/18-3-26/90846760.jpg">
-<meta property="og:updated_time" content="2018-03-25T18:24:48.765Z">
+<meta property="og:updated_time" content="2018-03-25T18:31:33.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="局部特征描述和匹配">
 <meta name="twitter:description" content="SIFT这篇文章应该会很长。 IntroductionSIFT是由UBC（university of British Column）的教授David Lowe于1999年提出，并在2004年得以完善的一种检测图像关键点（key points , 或者称为图像的interest points(兴趣点) )，并对关键点提取其局部尺度不变特征的描绘子，可以采用这个描绘子进行用于对两幅相关的图像进行匹配">
-<meta name="twitter:image" content="http://p59louklr.bkt.clouddn.com/18-3-26/90846760.jpg">
+<meta name="twitter:image" content="http://p59louklr.bkt.clouddn.com/18-3-26/51678471.jpg">
 
 
 
@@ -423,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  624
+                  748
                 </span>
               
 
@@ -439,7 +440,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -469,8 +470,8 @@
 <li>Efficiency： SIFT接近于实时的性能， 效率很高。</li>
 </ul>
 <h2 id="Procedure"><a href="#Procedure" class="headerlink" title="Procedure"></a>Procedure</h2><ul>
-<li>Scale-space extrema detection<br>这一步的目的是在尺度空间中选择选择潜在的满足尺度不变性和旋转不变性的关键点（或者称为兴趣点)。<br>和之前DoG生成尺度空间的过程相似，需要在不同尺寸下用不同的σ的DoG去生成尺度空间。接下来就可以求极值了，SIFT中的极值不是单一尺度下的极值，而是要求这个点是尺度空间中的极值。所以，如下图，为了利用这个三维空间中找到图像的中的兴趣点，我们需要找到这个尺度的3x3邻域的局部极值（由于这个尺度共有3幅图像，所以共需要比较绿色区域中心点附近3x3x3-1（即26个像素），看看这个这个中心点像素的的值是否大于周围的26个像素。如果是，我们就说这个中心点是局部极值。这个点就是我们的兴趣点。以此类推，找到所有的极值点（兴趣点）。<br><img src="http://p59louklr.bkt.clouddn.com/18-3-26/90846760.jpg" alt=""></li>
-<li>Keypoint localization<br>这一步的目的就是精确定位出特征关键点的位置, 涉及到剔除伪关键点。</li>
+<li>Scale-space extrema detection<br>这一步的目的是在尺度空间中选择选择潜在的满足尺度不变性和旋转不变性的关键点（或者称为兴趣点)。<br>和之前DoG生成尺度空间的过程相似，需要在不同尺寸下用不同的σ的DoG去生成尺度空间。<br>对于尺度空间大小的选择，也就是取多少个σ，实验证明3个的时候稳定的极值点最多。<br><img src="http://p59louklr.bkt.clouddn.com/18-3-26/51678471.jpg" alt=""><br>接下来就可以求极值了，SIFT中的极值不是单一尺度下的极值，而是要求这个点是尺度空间中的极值。所以，如下图，为了利用这个三维空间中找到图像的中的兴趣点，我们需要找到这个尺度的3x3邻域的局部极值（由于这个尺度共有3幅图像，所以共需要比较绿色区域中心点附近3x3x3-1（即26个像素），看看这个这个中心点像素的的值是否大于周围的26个像素。如果是，我们就说这个中心点是局部极值。这个点就是我们的兴趣点。以此类推，找到所有的极值点（兴趣点）。<br><img src="http://p59louklr.bkt.clouddn.com/18-3-26/90846760.jpg" alt=""></li>
+<li>Keypoint localization<br>这一步的目的就是精确定位出特征关键点的位置, 涉及到剔除伪关键点。<br>并不是所有的极值点都是关键点。而且由于对于一幅图像，我们可能找到很多的极值点，所以我们需要剔除掉一些不是关键点的点（可能是边缘的点，因为DoG对于边缘有很强的响应）。<br>剔去的是低对比度的候选关键点</li>
 <li>Orientation assignment<br>这一步的目的就是基于关键点的局部梯度方向，给每个相应的关键点分配方向。</li>
 <li>Keypoint description<br>此步骤的目的就是对于每个关键点，用一个向量去描述每个关键点。</li>
 </ul>
