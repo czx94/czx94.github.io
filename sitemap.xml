@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://czx.im/2018/03/10/Tensorflow5/</loc>
+    
+    <lastmod>2018-04-18T21:02:07.426Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://czx.im/2018/04/18/Tensorflow6/</loc>
     
-    <lastmod>2018-04-18T20:29:53.702Z</lastmod>
+    <lastmod>2018-04-18T20:51:57.282Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://czx.im/2018/04/18/words_of_muxin/</loc>
     
     <lastmod>2018-04-18T12:38:00.259Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://czx.im/2018/03/10/Tensorflow5/</loc>
-    
-    <lastmod>2018-04-17T16:00:36.045Z</lastmod>
     
   </url>
   
