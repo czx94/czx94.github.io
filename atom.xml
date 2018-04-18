@@ -69,19 +69,19 @@
   </entry>
   
   <entry>
-    <title>Tensorflow学习笔记6(Transfer Learning）</title>
+    <title>Tensorflow学习笔记6(Transfer Learning迁移学习）</title>
     <link href="http://czx.im/2018/04/18/Tensorflow6/"/>
     <id>http://czx.im/2018/04/18/Tensorflow6/</id>
     <published>2018-04-18T07:32:55.000Z</published>
-    <updated>2018-04-18T08:52:09.672Z</updated>
+    <updated>2018-04-18T12:34:38.751Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="Why-we-need-transfer-learning"><a href="#Why-we-need-transfer-learning" class="headerlink" title="Why we need transfer learning"></a>Why we need transfer learning</h1>]]></content>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h1 id="Dogs-vs-Cats"><a href="#Dogs-vs-Cats" class="headerlink" title="Dogs vs. Cats"></a>Dogs vs. Cats</h1><h1 id="Why-we-need-transfer-learning"><a href="#Why-we-need-transfer-learning" class="headerlink" title="Why we need transfer learning"></a>Why we need transfer learning</h1>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h1 id=&quot;Why-we-need-transfer-learning&quot;&gt;&lt;a href=&quot;#Why-we-need-transfer-learning&quot; class=&quot;hea
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h1 id=&quot;Dogs-vs-Cats&quot;&gt;&lt;a href=&quot;#Dogs-vs-Cats&quot; class=&quot;headerlink&quot; title=&quot;Dogs vs. Cats&quot;&gt;&lt;/a
       
     
     </summary>

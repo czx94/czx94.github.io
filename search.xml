@@ -23,9 +23,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Tensorflow学习笔记6(Transfer Learning）]]></title>
+    <title><![CDATA[Tensorflow学习笔记6(Transfer Learning迁移学习）]]></title>
     <url>%2F2018%2F04%2F18%2FTensorflow6%2F</url>
-    <content type="text"><![CDATA[Why we need transfer learning]]></content>
+    <content type="text"><![CDATA[Dogs vs. CatsWhy we need transfer learning]]></content>
       <categories>
         <category>笔记</category>
       </categories>
