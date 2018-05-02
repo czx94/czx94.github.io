@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://czx.im/2018/04/18/modern_poem/</loc>
+    <lastmod>2018-05-02T06:28:17.814Z</lastmod>
+    <data>
+        <display>
+        <title>现代诗</title>
+        <pubTime>2018-04-18T02:53:03.000Z</pubTime>
+        
+        <tag>无病呻吟</tag>
+         
+         
+           
+             
+              <breadCrumb title="现代诗" url="http://czx.im/categories/%E7%8E%B0%E4%BB%A3%E8%AF%97/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://czx.im/2018/03/09/poem/</loc>
     <lastmod>2018-04-22T13:24:35.327Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="古诗词" url="http://czx.im/categories/%E5%8F%A4%E8%AF%97%E8%AF%8D/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://czx.im/2018/04/18/modern_poem/</loc>
-    <lastmod>2018-04-22T13:06:42.611Z</lastmod>
-    <data>
-        <display>
-        <title>现代诗</title>
-        <pubTime>2018-04-18T08:53:03.000Z</pubTime>
-        
-        <tag>无病呻吟</tag>
-         
-         
-           
-             
-              <breadCrumb title="现代诗" url="http://czx.im/categories/%E7%8E%B0%E4%BB%A3%E8%AF%97/"/>
           
         </display>
     </data>
@@ -164,7 +164,7 @@
 
     
   <url>
-    <loc>http://czx.im/2018/03/08/Tensorflow2/</loc>
+    <loc>http://czx.im/2018/03/09/Tensorflow2/</loc>
     <lastmod>2018-03-19T07:51:32.822Z</lastmod>
     <data>
         <display>
@@ -228,7 +228,7 @@
 
     
   <url>
-    <loc>http://czx.im/2018/03/08/Tensorflow3/</loc>
+    <loc>http://czx.im/2018/03/09/Tensorflow3/</loc>
     <lastmod>2018-03-13T14:54:02.890Z</lastmod>
     <data>
         <display>
@@ -248,7 +248,7 @@
 
     
   <url>
-    <loc>http://czx.im/2018/03/05/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/</loc>
+    <loc>http://czx.im/2018/03/06/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B/</loc>
     <lastmod>2018-03-12T08:46:59.699Z</lastmod>
     <data>
         <display>
